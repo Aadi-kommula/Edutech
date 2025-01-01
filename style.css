@@ -52,7 +52,7 @@ nav{
 
 .intro{
     display: flex;
-    margin-left: 50px;
+    margin: 0px 20px 0px 50px;
 
     img{
         
@@ -134,21 +134,23 @@ nav{
         display: flex;
         flex-direction: column;
         #arrow{
-            margin: 60px 0px 0px 0px;
-            top:93%;
-            left:43%;
+            display: none;            
          }
+     }
+     .intro-text p{
+        font-size: 32px;
+        width: fit-content;
      }
     .intro-image{
         margin: 60px 0px 0px 0px;
     }
     #model{
         width: 300px;
-        margin: 60px 0px 0px 100px;
+        margin: 50px 0px 0px 0px;
     }
     #circle{
-        top:90%;
-        left:10%;
-        margin:60px 0px 0px 0px ;
+       /* display: none; */
+       top:530px;
+       left:50px;
     }
 }
