@@ -134,7 +134,9 @@ nav{
         display: flex;
         flex-direction: column;
         #arrow{
-            display: none;            
+            /* display: none;         */
+            top:500px;
+            left: -20px;
          }
      }
      .intro-text p{
@@ -146,7 +148,7 @@ nav{
     }
     #model{
         width: 300px;
-        margin: 50px 0px 0px 0px;
+        margin: 70px 0px 0px 50px;
     }
     #circle{
        /* display: none; */
