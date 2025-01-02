@@ -103,7 +103,12 @@ nav{
     display: block;
     font-family: "Montserrat", sans-serif;
 }
-.intro-text p{
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.intro-text {    
+    p{
     font-family: "Montserrat", sans-serif;
     font-size: 40px;
     font-weight: 500;
@@ -115,7 +120,8 @@ nav{
         font-size: 40px;
         display: inline;
     }
-
+    
+    }
    
 }
 .intro-text span{
