@@ -75,14 +75,17 @@ body {
 .btn {
     margin: 5px 20px;
 }
-#videoFrame{
+
+#videoFrame {
     width: 70%;
-    height: 500px;
+    height: 460px;
 }
-#SourceFrame{
+
+#SourceFrame {
     width: 28%;
-    height: 500px;
+    height: 460px;
 }
+
 .text-c {
     p {
         display: inline-block;
@@ -123,24 +126,43 @@ body {
 
 @media screen and (max-width:500px) {
     #SourceFrame {
+        margin: 0px 20px 10px 20px;
+        width: 90%;
+        height: 250px;
+    }
+
+    .html-image {
         display: none;
     }
-    .html-image{
-        display: none;
-    }
-    #videoFrame{
-        width: 100%;
+
+    #videoFrame {
+        width: 90%;
         height: 300px;
-       
+        margin-bottom: 10px;
+
     }
-    .progress-container{
+
+    .progress-container {
         margin-top: 0px;
     }
-    .btn{
+
+    .btn {
         margin-left: 50px;
     }
-    .html-text img{
-           display: none;
-        
+
+    .html-text {
+        p {
+            margin: 0px;
+        }
+
+        img {
+            display: none;
+
+        }
+    }
+
+    .video-container {
+        display: flex;
+        flex-direction: column;
     }
 }

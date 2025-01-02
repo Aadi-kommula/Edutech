@@ -55,8 +55,8 @@
         </div>
     </div>
     <div class="video-container">
-        <iframe id="videoFrame" src="../components/default-video.html" scrolling="no"></iframe>
-        <iframe id="SourceFrame" src="../components/html-Source.html" ></iframe>
+        <iframe id="videoFrame" src="../components/default-video.html" scrolling="no" name="videoFrame"></iframe>
+        <iframe id="SourceFrame" src="../components/html-Source.html" name="SourceFrame" ></iframe>
     </div>
     <!-- Progress Bar and Percentage -->
     <div class="progress-container">
@@ -79,6 +79,7 @@
                     You have successfully completed the course!
                 </div>
                 <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal"><a href="./Quiz/index.html">Open Quiz</a></button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
