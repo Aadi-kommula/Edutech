@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edutech Courses</title>
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../html-course.css">
+</head>
+
+<body>
+    <div class="intro-container">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a href="../index.html"><img src="../images/e-learning logo.png" alt="Logo" width="150px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link nav-item" aria-current="page" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="../index.html#course-container" role="button"
+                                aria-expanded="false">
+                                Courses
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">HTML</a></li>
+                                <li><a class="dropdown-item" href="#">CSS</a></li>
+                                <li><a class="dropdown-item" href="#">JavaScript</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Quiz/index.html">Quiz</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- New navbar visible while scrolling -->
+        <nav id="scrollNavbar" class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a href="../index.html"><img src="../images/e-learning logo.png" alt="Logo" width="150px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link nav-item" aria-current="page" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="../index.html#course-container" role="button" aria-expanded="false">
+                                Courses
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#course-container">HTML</a></li>
+                                <li><a class="dropdown-item" href="#course-container">CSS</a></li>
+                                <li><a class="dropdown-item" href="#course-container">JavaScript</a></li>
+                                <li><a class="dropdown-item" href="#course-container">React</a></li>
+                                <li><a class="dropdown-item" href="#course-container">Java</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Quiz/index.html">Quiz</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+    <div class="html-intro">
+        <div class="html-text">
+            Courses <span>Details</span>
+            <p>Build Your First Website with <span>JavaScript Start Today!</span></p>
+            <img src="../images/shape.webp" alt="">
+        </div>
+        <div class="html-image">
+            <img id="badge" src="../images/badge.png" alt="">
+            <img id="arrow" src="../images/image.png" alt="">
+            <img src="../images/author-11.webp" alt="">
+        </div>
+    </div>
+    <div class="video-container">
+        <iframe id="videoFrame" src="../components/dv.js.html" scrolling="no" name="videoFrame"
+            allowfullscreen></iframe>
+        <iframe id="SourceFrame" src="../courses/js-source.html" name="SourceFrame"></iframe>
+    </div>
+    <!-- Progress Bar and Percentage -->
+    <div class="progress-container">
+        <div id="progressBar" class="progress-bar"></div>
+    </div>
+    <div class="text-c">
+        <p>Note: Click on next button for next class or Session</p>
+        <button id="nextButton" class="btn btn-success">Next Video</button>
+        <button id="tryquiz" class="btn btn-success"><a href="../Quiz/js-quiz.html">Try Quiz</a></button>
+        <span id="percentage">0% Completed</span>
+    </div>
+
+    <div class="modal fade" id="completionModal" tabindex="-1" aria-labelledby="completionModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="completionModalLabel">Congratulations!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    You have successfully completed the course!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal"><a
+                            href="../Quiz/js-quiz.html">Open Quiz</a></button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const videoUrls = [
+            "https://www.youtube.com/embed/R4MMtTLUZp4",
+            "https://www.youtube.com/embed/_DTwrzHWtjI",
+            "https://www.youtube.com/embed/aZPkq7giw9o",
+            "https://www.youtube.com/embed/hIGspfjkgQY",
+            "https://www.youtube.com/embed/n3rYHNU20mU",
+            "https://www.youtube.com/embed/wRqNUcM7Qvc",
+            "https://www.youtube.com/embed/YFBBjj8UOmc",
+            "https://www.youtube.com/embed/T-3k6n4nUWQ",
+            "https://www.youtube.com/embed/XUvQfhkHGXw",
+            "https://www.youtube.com/embed/VrWuAEbu2BU",
+            "https://www.youtube.com/embed/LC1ClqfjrRQ",
+            "https://www.youtube.com/embed/-YawXd1ItO8",
+            "https://www.youtube.com/embed/ICrky_07nf8",
+            "https://www.youtube.com/embed/onFn8EA0bs0",
+            "https://www.youtube.com/embed/TAsZMfaH7CI",
+            "https://www.youtube.com/embed/jFWxDP62Xhw",
+            "https://www.youtube.com/embed/fD1Fyfm8TZc",
+            "https://www.youtube.com/embed/rAkJxoXEIg4",
+            "https://www.youtube.com/embed/xFKIbAtD79g",
+            "https://www.youtube.com/embed/fgnxiY0sO50",
+            "https://www.youtube.com/embed/kwIRIG9ZF_c",
+            "https://www.youtube.com/embed/VbSJJsb6dLE",
+            "https://www.youtube.com/embed/UJ2u8rnlVTE",
+            "https://www.youtube.com/embed/Tczzr9WeN2Q",
+            "https://www.youtube.com/embed/nDBh4dggbcw",
+            "https://www.youtube.com/embed/AsN9uNLwzmk",
+            "https://www.youtube.com/embed/ZD1FStN0oso",
+            "https://www.youtube.com/embed/XIhfz6kFPIk",
+            "https://www.youtube.com/embed/8MQu8yhDn-Q",
+            "https://www.youtube.com/embed/W0_pv8cc_aA",
+            "https://www.youtube.com/embed/pkDnAPQlabg",
+            "https://www.youtube.com/embed/xC_dgeLqcpI",
+            "https://www.youtube.com/embed/ahB_6SDp3rA",
+            "https://www.youtube.com/embed/ZDzWdFYBgLI",
+            "https://www.youtube.com/embed/YbiwZXenseU",
+            "https://www.youtube.com/embed/jW_JlAMsd2w",
+            "https://www.youtube.com/embed/2fhrSd0ctBc",
+            "https://www.youtube.com/embed/oAGrM7dv2n0",
+            "https://www.youtube.com/embed/KkGkF-3DVlM",
+            "https://www.youtube.com/embed/UFLtdM8KaHQ",
+            "https://www.youtube.com/embed/nR-lJY82b58",
+            "https://www.youtube.com/embed/Ito-1DA_D5M",
+            "https://www.youtube.com/embed/iIOK8SKhk5I",
+            "https://www.youtube.com/embed/FImu8JIzCCY",
+            "https://www.youtube.com/embed/8ePMVoCHhAA",
+            "https://www.youtube.com/embed/ImsUo104gPM",
+            "https://www.youtube.com/embed/zjEht5s8mos",
+            "https://www.youtube.com/embed/8Gid06qP5GA",
+            "https://www.youtube.com/embed/5tg01zKvO4s",
+            "https://www.youtube.com/embed/Dm9eINmLV-E",
+            "https://www.youtube.com/embed/cCj4Plp-scY",
+            "https://www.youtube.com/embed/widWy7OCoro",
+            "https://www.youtube.com/embed/jvJ073_1DXQ",
+            "https://www.youtube.com/embed/dV8_bcfQdMI",
+            "https://www.youtube.com/embed/SS7YsGjI6gw",
+            "https://www.youtube.com/embed/qDWu2p0WPrY",
+            "https://www.youtube.com/embed/3i_NjpKEs8Q",
+            "https://www.youtube.com/embed/TvBIrJw4LOQ",
+            "https://www.youtube.com/embed/533yq1nzY8g",
+            "https://www.youtube.com/embed/gdzzkUOrSu4",
+            "https://www.youtube.com/embed/EgrV_Zi8pGg",
+            "https://www.youtube.com/embed/CgGkMvxRksA",
+            "https://www.youtube.com/embed/nArL3OmKlfM",
+            "https://www.youtube.com/embed/zXRMJ3cRNN8",
+            "https://www.youtube.com/embed/-L0eCuJHJWk",
+            "https://www.youtube.com/embed/slL9YvE6hso",
+            "https://www.youtube.com/embed/TFuyUWFzB34",
+            "https://www.youtube.com/embed/q0-miSbcmp4",
+            "https://www.youtube.com/embed/a0oH41jERks",
+            "https://www.youtube.com/embed/Vyncn6f3E54",
+            "https://www.youtube.com/embed/PPAnFQLcZac",
+            "https://www.youtube.com/embed/XICcR4cjw8w",
+            "https://www.youtube.com/embed/HbtpaUqRMRI",
+            "https://www.youtube.com/embed/QZKYRqzvTAc",
+            "https://www.youtube.com/embed/XiXUg_3-S5A",
+            "https://www.youtube.com/embed/rponDyXJL4s",
+            "https://www.youtube.com/embed/ZdDbXpyhpJw",
+            "https://www.youtube.com/embed/pRsZnsypUyE",
+            "https://www.youtube.com/embed/bIooVJUz8sE",
+            "https://www.youtube.com/embed/Tr1bA6sDE1E",
+            "https://www.youtube.com/embed/MeScGCqXOdA",
+            "https://www.youtube.com/embed/k-aEQU58s1E",
+            "https://www.youtube.com/embed/KUzCdytAgyk",
+            "https://www.youtube.com/embed/y52A1ch4u1o",
+            "https://www.youtube.com/embed/KUVBrs5S0YU",
+            "https://www.youtube.com/embed/3cKfntvhxng",
+            "https://www.youtube.com/embed/FvVMy9nyyV4",
+            "https://www.youtube.com/embed/t52xpia8_9Y",
+            "https://www.youtube.com/embed/GZygeIzSGZI",
+            "https://www.youtube.com/embed/uBI9gefMAuo",
+            "https://www.youtube.com/embed/X8EACNiE1hk",
+            "https://www.youtube.com/embed/1p6zq7BeEAY",
+            "https://www.youtube.com/embed/KHmdkj2JeC4",
+            "https://www.youtube.com/embed/wODHKhYlDP0",
+            "https://www.youtube.com/embed/qvvfV-tR7pY",
+            "https://www.youtube.com/embed/PnLsPuV9Ykc",
+            "https://www.youtube.com/embed/Cgx1nE14x0I",
+            "https://www.youtube.com/embed/1DPEJp8wp38",
+            "https://www.youtube.com/embed/VhBI9qK9lgQ",
+            "https://www.youtube.com/embed/2xYjQzSbG1E",
+            "https://www.youtube.com/embed/Ft6sxCrqXKw",
+            "https://www.youtube.com/embed/1TaPzXJAbr4",
+            "https://www.youtube.com/embed/r4HTctQ1LBA",
+            "https://www.youtube.com/embed/emZjLvK8I_Q",
+            "https://www.youtube.com/embed/JDAMF3MY5gM",
+            "https://www.youtube.com/embed/R4MMtTLUZp4",
+            "https://www.youtube.com/embed/_DTwrzHWtjI",
+            "https://www.youtube.com/embed/aZPkq7giw9o",
+            "https://www.youtube.com/embed/hIGspfjkgQY",
+            "https://www.youtube.com/embed/n3rYHNU20mU",
+            "https://www.youtube.com/embed/wRqNUcM7Qvc",
+            "https://www.youtube.com/embed/YFBBjj8UOmc",
+            "https://www.youtube.com/embed/T-3k6n4nUWQ",
+            "https://www.youtube.com/embed/XUvQfhkHGXw",
+            "https://www.youtube.com/embed/VrWuAEbu2BU",
+            "https://www.youtube.com/embed/LC1ClqfjrRQ",
+            "https://www.youtube.com/embed/-YawXd1ItO8",
+            "https://www.youtube.com/embed/ICrky_07nf8",
+            "https://www.youtube.com/embed/onFn8EA0bs0",
+            "https://www.youtube.com/embed/TAsZMfaH7CI",
+            "https://www.youtube.com/embed/jFWxDP62Xhw",
+            "https://www.youtube.com/embed/fD1Fyfm8TZc",
+            "https://www.youtube.com/embed/rAkJxoXEIg4",
+            "https://www.youtube.com/embed/xFKIbAtD79g",
+            "https://www.youtube.com/embed/fgnxiY0sO50",
+            "https://www.youtube.com/embed/kwIRIG9ZF_c",
+            "https://www.youtube.com/embed/VbSJJsb6dLE",
+            "https://www.youtube.com/embed/UJ2u8rnlVTE",
+            "https://www.youtube.com/embed/Tczzr9WeN2Q",
+            "https://www.youtube.com/embed/nDBh4dggbcw",
+            "https://www.youtube.com/embed/AsN9uNLwzmk",
+            "https://www.youtube.com/embed/ZD1FStN0oso",
+            "https://www.youtube.com/embed/XIhfz6kFPIk",
+            "https://www.youtube.com/embed/8MQu8yhDn-Q",
+            "https://www.youtube.com/embed/W0_pv8cc_aA",
+            "https://www.youtube.com/embed/pkDnAPQlabg",
+            "https://www.youtube.com/embed/xC_dgeLqcpI",
+            "https://www.youtube.com/embed/ahB_6SDp3rA",
+            "https://www.youtube.com/embed/ZDzWdFYBgLI",
+            "https://www.youtube.com/embed/YbiwZXenseU",
+            "https://www.youtube.com/embed/jW_JlAMsd2w",
+            "https://www.youtube.com/embed/2fhrSd0ctBc",
+            "https://www.youtube.com/embed/oAGrM7dv2n0",
+            "https://www.youtube.com/embed/KkGkF-3DVlM",
+            "https://www.youtube.com/embed/UFLtdM8KaHQ",
+            "https://www.youtube.com/embed/nR-lJY82b58",
+            "https://www.youtube.com/embed/Ito-1DA_D5M",
+            "https://www.youtube.com/embed/iIOK8SKhk5I",
+            "https://www.youtube.com/embed/FImu8JIzCCY",
+            "https://www.youtube.com/embed/8ePMVoCHhAA",
+            "https://www.youtube.com/embed/ImsUo104gPM",
+            "https://www.youtube.com/embed/zjEht5s8mos",
+            "https://www.youtube.com/embed/8Gid06qP5GA",
+            "https://www.youtube.com/embed/5tg01zKvO4s",
+            "https://www.youtube.com/embed/Dm9eINmLV-E",
+            "https://www.youtube.com/embed/cCj4Plp-scY",
+            "https://www.youtube.com/embed/widWy7OCoro",
+            "https://www.youtube.com/embed/jvJ073_1DXQ",
+            "https://www.youtube.com/embed/dV8_bcfQdMI",
+            "https://www.youtube.com/embed/SS7YsGjI6gw",
+            "https://www.youtube.com/embed/qDWu2p0WPrY",
+            "https://www.youtube.com/embed/3i_NjpKEs8Q",
+            "https://www.youtube.com/embed/TvBIrJw4LOQ",
+            "https://www.youtube.com/embed/533yq1nzY8g",
+            "https://www.youtube.com/embed/gdzzkUOrSu4",
+            "https://www.youtube.com/embed/EgrV_Zi8pGg",
+            "https://www.youtube.com/embed/CgGkMvxRksA",
+            "https://www.youtube.com/embed/nArL3OmKlfM",
+            "https://www.youtube.com/embed/zXRMJ3cRNN8",
+            "https://www.youtube.com/embed/-L0eCuJHJWk",
+            "https://www.youtube.com/embed/slL9YvE6hso",
+            "https://www.youtube.com/embed/TFuyUWFzB34",
+            "https://www.youtube.com/embed/q0-miSbcmp4",
+            "https://www.youtube.com/embed/a0oH41jERks",
+            "https://www.youtube.com/embed/Vyncn6f3E54",
+            "https://www.youtube.com/embed/PPAnFQLcZac",
+            "https://www.youtube.com/embed/XICcR4cjw8w",
+            "https://www.youtube.com/embed/HbtpaUqRMRI",
+            "https://www.youtube.com/embed/QZKYRqzvTAc",
+            "https://www.youtube.com/embed/XiXUg_3-S5A",
+            "https://www.youtube.com/embed/rponDyXJL4s",
+            "https://www.youtube.com/embed/ZdDbXpyhpJw",
+            "https://www.youtube.com/embed/pRsZnsypUyE",
+            "https://www.youtube.com/embed/bIooVJUz8sE",
+            "https://www.youtube.com/embed/Tr1bA6sDE1E",
+            "https://www.youtube.com/embed/MeScGCqXOdA",
+            "https://www.youtube.com/embed/k-aEQU58s1E",
+            "https://www.youtube.com/embed/KUzCdytAgyk",
+            "https://www.youtube.com/embed/y52A1ch4u1o",
+            "https://www.youtube.com/embed/KUVBrs5S0YU",
+            "https://www.youtube.com/embed/3cKfntvhxng",
+            "https://www.youtube.com/embed/FvVMy9nyyV4",
+            "https://www.youtube.com/embed/t52xpia8_9Y",
+            "https://www.youtube.com/embed/GZygeIzSGZI",
+            "https://www.youtube.com/embed/uBI9gefMAuo",
+            "https://www.youtube.com/embed/X8EACNiE1hk",
+            "https://www.youtube.com/embed/1p6zq7BeEAY",
+            "https://www.youtube.com/embed/KHmdkj2JeC4",
+            "https://www.youtube.com/embed/wODHKhYlDP0",
+            "https://www.youtube.com/embed/qvvfV-tR7pY",
+            "https://www.youtube.com/embed/PnLsPuV9Ykc",
+            "https://www.youtube.com/embed/Cgx1nE14x0I",
+            "https://www.youtube.com/embed/1DPEJp8wp38",
+            "https://www.youtube.com/embed/VhBI9qK9lgQ",
+            "https://www.youtube.com/embed/2xYjQzSbG1E",
+            "https://www.youtube.com/embed/Ft6sxCrqXKw",
+            "https://www.youtube.com/embed/1TaPzXJAbr4",
+            "https://www.youtube.com/embed/r4HTctQ1LBA",
+            "https://www.youtube.com/embed/emZjLvK8I_Q",
+            "https://www.youtube.com/embed/JDAMF3MY5gM"
+        ];
+
+        let currentVideoIndex = 0;
+        let progress = 0;
+        function loadNextVideo() {
+            if (currentVideoIndex < videoUrls.length - 1) {
+                currentVideoIndex++;
+            } else {
+                currentVideoIndex = 0;
+            }
+            document.getElementById("videoFrame").src = videoUrls[currentVideoIndex];
+
+            progress += 0.96; // Increase progress by 4.3%
+            if (progress > 100) progress = 100;
+            updateProgressBar();
+
+            if (progress >= 100) {
+                showCompletionModal();
+            }
+        }
+
+        function updateProgressBar() {
+            const progressBar = document.getElementById("progressBar");
+            const percentageDisplay = document.getElementById("percentage");
+            progressBar.style.width = `${progress}%`;
+            percentageDisplay.textContent = `${Math.round(progress)}% Completed`;
+        }
+
+        function showCompletionModal() {
+            const completionModal = new bootstrap.Modal(document.getElementById('completionModal'));
+            completionModal.show();
+        }
+
+        document.getElementById("nextButton").addEventListener("click", loadNextVideo);
+
+        // JavaScript to toggle the visibility of the new navbar on scroll
+        window.addEventListener("scroll", function () {
+            const scrollNavbar = document.getElementById("scrollNavbar");
+            if (window.scrollY > 100) { // Adjust the scroll threshold as needed
+                scrollNavbar.classList.add("visible");
+            } else {
+                scrollNavbar.classList.remove("visible");
+            }
+        });
+    </script>
+
+</body>
+
+</html>
