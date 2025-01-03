@@ -45,7 +45,7 @@
          <!-- New navbar visible while scrolling -->         
          <nav id="scrollNavbar" class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a href="./index.html"><img src="../images/e-learning logo.png" alt="Logo" width="150px"></a>
+                <a href="../index.html"><img src="../images/e-learning logo.png" alt="Logo" width="150px"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -88,7 +88,8 @@
         </div>
     </div>
     <div class="video-container">
-        <iframe id="videoFrame" src="../components/default-video.html" scrolling="no" name="videoFrame"></iframe>
+        <iframe id="videoFrame" src="../components/default-video.html" scrolling="no" name="videoFrame"         
+            allowfullscreen ></iframe>
         <iframe id="SourceFrame" src="../components/html-Source.html" name="SourceFrame" ></iframe>
     </div>
     <!-- Progress Bar and Percentage -->
@@ -98,6 +99,7 @@
     <div class="text-c">
         <p>Note: Click on next button for next class or Session</p>
         <button id="nextButton" class="btn btn-success">Next Video</button>
+        <button id="nextButton" class="btn btn-success"><a href="../Quiz/index.html">Try Quiz</a></button>
         <span id="percentage">0% Completed</span>
     </div>
 
@@ -112,7 +114,7 @@
                     You have successfully completed the course!
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-success" data-bs-dismiss="modal"><a href="./Quiz/index.html">Open Quiz</a></button>
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal"><a href="../Quiz/index.html">Open Quiz</a></button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
