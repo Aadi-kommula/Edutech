@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Html Quiz</title>
+    <title>Git Quiz</title>
     <link rel="stylesheet" href="quiz.css">
     <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -94,7 +94,7 @@
 
     <div class="quiz-container">
         <div class="content">
-            <h1 id="heading">Test Your Code Skills – Master the Web,<Span> Let's Start Html Quiz!</Span></h1>
+            <h1 id="heading">Test Your Code Skills  <Span> Let's Start Git Quiz!</Span></h1>
             <div class="card" id="card">
                 <div class="ques">
                     <h2>Question No: <span id="question-number">1</span> / <span id="total-questions">10</span></h2>
@@ -117,42 +117,42 @@
     </div>
     <script>
         const question = [
-    "What does HTML stand for?",
-    "Which tag is used to create a hyperlink in HTML?",
-    "What is the correct HTML element for the largest heading?",
-    "Which HTML tag is used to define an internal style sheet?",
-    "What is the purpose of the <img> tag in HTML?",
-    "Which attribute is used to provide a unique identifier for an HTML element?",
-    "What is the correct HTML for adding a background color?",
-    "Which HTML element is used to define a table row?",
-    "What is the purpose of the <form> tag in HTML?",
-    "Which HTML tag is used to define a list item?"
+    "What is Git?",
+    "Which command is used to initialize a new Git repository?",
+    "What is the purpose of the 'git clone' command?",
+    "Which command is used to stage changes in Git?",
+    "What is the purpose of the 'git commit' command?",
+    "Which command is used to view the commit history in Git?",
+    "What is the purpose of the 'git push' command?",
+    "Which command is used to create a new branch in Git?",
+    "What is the purpose of the 'git pull' command?",
+    "Which command is used to merge branches in Git?"
 ];
 
 const options = [
-    ["Hyper Text Markup Language", "Hyperlinks and Text Markup Language", "Home Tool Markup Language", "Hyper Tool Markup Language"],
-    ["<link>", "<a>", "<href>", "<hyperlink>"],
-    ["<h1>", "<heading>", "<h6>", "<head>"],
-    ["<css>", "<style>", "<script>", "<link>"],
-    ["To display an image", "To create a hyperlink", "To add a video", "To define a paragraph"],
-    ["class", "id", "name", "style"],
-    ["<body bg='yellow'>", "<background>yellow</background>", "<body style='background-color:yellow;'>", "<body color='yellow'>"],
-    ["<tr>", "<td>", "<th>", "<table>"],
-    ["To create a table", "To define a form for user input", "To display an image", "To create a list"],
-    ["<li>", "<ul>", "<ol>", "<list>"]
+    ["A programming language", "A version control system", "A database", "A text editor"],
+    ["git init", "git start", "git new", "git create"],
+    ["To create a new branch", "To copy a repository", "To delete a repository", "To stage changes"],
+    ["git add", "git stage", "git commit", "git push"],
+    ["To save changes to the repository", "To stage changes", "To create a new branch", "To view the commit history"],
+    ["git log", "git history", "git commits", "git view"],
+    ["To upload changes to a remote repository", "To download changes from a remote repository", "To stage changes", "To create a new branch"],
+    ["git branch", "git new-branch", "git create-branch", "git checkout -b"],
+    ["To upload changes to a remote repository", "To download changes from a remote repository", "To stage changes", "To create a new branch"],
+    ["git merge", "git combine", "git join", "git integrate"]
 ];
 
 const actualans = [
-    "Hyper Text Markup Language",
-    "<a>",
-    "<h1>",
-    "<style>",
-    "To display an image",
-    "id",
-    "<body style='background-color:yellow;'>",
-    "<tr>",
-    "To define a form for user input",
-    "<li>"
+    "A version control system",
+    "git init",
+    "To copy a repository",
+    "git add",
+    "To save changes to the repository",
+    "git log",
+    "To upload changes to a remote repository",
+    "git branch",
+    "To download changes from a remote repository",
+    "git merge"
 ];
 let counter = 0;
 let score = 0;

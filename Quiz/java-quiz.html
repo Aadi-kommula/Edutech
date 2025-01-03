@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Html Quiz</title>
+    <title>Java Quiz</title>
     <link rel="stylesheet" href="quiz.css">
     <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -94,7 +94,7 @@
 
     <div class="quiz-container">
         <div class="content">
-            <h1 id="heading">Test Your Code Skills – Master the Web,<Span> Let's Start Html Quiz!</Span></h1>
+            <h1 id="heading">Test Your Code Skills  <Span> Let's Start Java Quiz!</Span></h1>
             <div class="card" id="card">
                 <div class="ques">
                     <h2>Question No: <span id="question-number">1</span> / <span id="total-questions">10</span></h2>
@@ -117,42 +117,42 @@
     </div>
     <script>
         const question = [
-    "What does HTML stand for?",
-    "Which tag is used to create a hyperlink in HTML?",
-    "What is the correct HTML element for the largest heading?",
-    "Which HTML tag is used to define an internal style sheet?",
-    "What is the purpose of the <img> tag in HTML?",
-    "Which attribute is used to provide a unique identifier for an HTML element?",
-    "What is the correct HTML for adding a background color?",
-    "Which HTML element is used to define a table row?",
-    "What is the purpose of the <form> tag in HTML?",
-    "Which HTML tag is used to define a list item?"
+    "What is Java?",
+    "Which of the following is not a Java keyword?",
+    "How do you declare a variable in Java?",
+    "Which operator is used to compare two values in Java?",
+    "What is the correct syntax for creating an object in Java?",
+    "How do you write a comment in Java?",
+    "Which method is used to print text in Java?",
+    "What is the output of 'System.out.println(5 + 5);' in Java?",
+    "Which keyword is used to define a class in Java?",
+    "How do you create a method in Java?"
 ];
 
 const options = [
-    ["Hyper Text Markup Language", "Hyperlinks and Text Markup Language", "Home Tool Markup Language", "Hyper Tool Markup Language"],
-    ["<link>", "<a>", "<href>", "<hyperlink>"],
-    ["<h1>", "<heading>", "<h6>", "<head>"],
-    ["<css>", "<style>", "<script>", "<link>"],
-    ["To display an image", "To create a hyperlink", "To add a video", "To define a paragraph"],
-    ["class", "id", "name", "style"],
-    ["<body bg='yellow'>", "<background>yellow</background>", "<body style='background-color:yellow;'>", "<body color='yellow'>"],
-    ["<tr>", "<td>", "<th>", "<table>"],
-    ["To create a table", "To define a form for user input", "To display an image", "To create a list"],
-    ["<li>", "<ul>", "<ol>", "<list>"]
+    ["A markup language", "A programming language", "A styling language", "A database language"],
+    ["int", "float", "string", "boolean"],
+    ["int x;", "variable x;", "v x;", "declare x;"],
+    ["=", "==", "===", "=>"],
+    ["new MyClass();", "MyClass obj = new MyClass();", "MyClass obj = MyClass();", "obj = new MyClass();"],
+    ["<!-- comment -->", "// comment", "/* comment */", "# comment"],
+    ["print()", "println()", "System.out.println()", "console.log()"],
+    ["10", "55", "Error", "NaN"],
+    ["class", "Class", "className", "define"],
+    ["method myMethod()", "void myMethod()", "function myMethod()", "def myMethod()"]
 ];
 
 const actualans = [
-    "Hyper Text Markup Language",
-    "<a>",
-    "<h1>",
-    "<style>",
-    "To display an image",
-    "id",
-    "<body style='background-color:yellow;'>",
-    "<tr>",
-    "To define a form for user input",
-    "<li>"
+    "A programming language",
+    "string",
+    "int x;",
+    "==",
+    "MyClass obj = new MyClass();",
+    "// comment",
+    "System.out.println()",
+    "10",
+    "class",
+    "void myMethod()"
 ];
 let counter = 0;
 let score = 0;

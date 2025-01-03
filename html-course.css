@@ -188,4 +188,8 @@ body {
         display: flex;
         flex-direction: column;
     }
+    
+   #nextbutton,#tryquiz {
+        margin: 0;
+    }
 }
