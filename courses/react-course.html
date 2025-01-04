@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edutech Courses</title>
+    <title>Edutech ReactJS Course</title>
     <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -65,7 +65,8 @@
                             <a class="nav-link nav-item" aria-current="page" href="../index.html">Home</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link" href="../index.html#course-container" role="button" aria-expanded="false">
+                            <a class="nav-link" href="../index.html#course-container" role="button"
+                                aria-expanded="false">
                                 Courses
                             </a>
                             <ul class="dropdown-menu">
@@ -88,7 +89,7 @@
     <div class="html-intro">
         <div class="html-text">
             Courses <span>Details</span>
-            <p>Design Your First Website with <span>CSS Start Today!</span></p>
+            <p>Build Dynamic Web Apps Effortlessly! <span>Master ReactJS</span></p>
             <img src="../images/shape.webp" alt="">
         </div>
         <div class="html-image">
@@ -98,9 +99,9 @@
         </div>
     </div>
     <div class="video-container">
-        <iframe id="videoFrame" src="../components/dv.css.html" scrolling="no" name="videoFrame"
+        <iframe id="videoFrame" src="../components/dv.react.html" scrolling="no" name="videoFrame"
             allowfullscreen></iframe>
-        <iframe id="SourceFrame" src="../courses/css-source.html" name="SourceFrame"></iframe>
+        <iframe id="SourceFrame" src="../courses/react-source.html" name="SourceFrame"></iframe>
     </div>
     <!-- Progress Bar and Percentage -->
     <div class="progress-container">
@@ -109,7 +110,7 @@
     <div class="text-c">
         <p>Note: Click on next button for next class or Session</p>
         <button id="nextButton" class="btn btn-success">Next Video</button>
-        <button id="tryquiz" class="btn btn-success"><a href="../Quiz/css-quiz.html">Try Quiz</a></button>
+        <button id="tryquiz" class="btn btn-success"><a href="../Quiz/react-quiz.html">Try Quiz</a></button>
         <span id="percentage">0% Completed</span>
     </div>
 
@@ -126,7 +127,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-success" data-bs-dismiss="modal"><a
-                            href="../Quiz/css-quiz.html">Open Quiz</a></button>
+                            href="../Quiz/react-quiz.html">Open Quiz</a></button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -134,49 +135,55 @@
     </div>
     <footer class="text-center py-2 mt-4">
         <div class="container">
-          <div class="row align-items-center">
-            <div class="col-md-4">
-              <!-- <img src="./images/e-learning logo.png" alt="Company Logo" class="img-fluid" width="90px">  -->
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <!-- <img src="./images/e-learning logo.png" alt="Company Logo" class="img-fluid" width="90px">  -->
+                </div>
+                <div class="col-md-4">
+                    <p class="mb-0">© 2025 Edutech. All rights reserved.</p>
+                </div>
             </div>
-            <div class="col-md-4">
-              <p class="mb-0">© 2025 Edutech. All rights reserved.</p>
-            </div>
-          </div>
         </div>
-      </footer>
+    </footer>
     <script>
         const videoUrls = [
-            "https://www.youtube.com/embed/1gKm9R_5lsE",
-            "https://www.youtube.com/embed/KYGH4f5YLEs",
-            "https://www.youtube.com/embed/u4DYjkEinw4",
-            "https://www.youtube.com/embed/N_sUYLU-ANI",
-            "https://www.youtube.com/embed/JFrrQXt_4Jc",
-            "https://www.youtube.com/embed/8DGFfKnTey4",
-            "https://www.youtube.com/embed/UOPthZvCb9s",
-            "https://www.youtube.com/embed/HZk-SZSHroU",
-            "https://www.youtube.com/embed/zTH86M8KkOU",
-            "https://www.youtube.com/embed/fsQFamCe4SU",
-            "https://www.youtube.com/embed/kIOfscFjF8w",
-            "https://www.youtube.com/embed/DwMB1DksfKw",
-            "https://www.youtube.com/embed/KBHeypHgv_0",
-            "https://www.youtube.com/embed/ButajZO42Io",
-            "https://www.youtube.com/embed/9pwjpONzlhA",
-            "https://www.youtube.com/embed/0ZdnKtvda4I",
-            "https://www.youtube.com/embed/YewVz3Bzolk",
-            "https://www.youtube.com/embed/NpOUheL1-aM",
-            "https://www.youtube.com/embed/hVXbHkl04rI",
-            "https://www.youtube.com/embed/dc8BC8AI4u0",
-            "https://www.youtube.com/embed/ENJ_Ggfn0-0",
-            "https://www.youtube.com/embed/_uFiLcNryB0",
-            "https://www.youtube.com/embed/iwimB21o6as",
-            "https://www.youtube.com/embed/KlAbJr0QW4s",
-            "https://www.youtube.com/embed/-RQujyP0IoA",
-            "https://www.youtube.com/embed/cmPiMCsHdn8",
-            "https://www.youtube.com/embed/OhKRdRZjwX0",
-            "https://www.youtube.com/embed/MyJAyX7j3yc",
-            "https://www.youtube.com/embed/OnFc6fJZKWI",
-            "https://www.youtube.com/embed/P0DldzWF-zQ",
-            "https://www.youtube.com/embed/3F_po29sKPs"
+            "https://www.youtube.com/embed/UXZLkmaCqIs",
+            "https://www.youtube.com/embed/VCjwjK1mHzk",
+            "https://www.youtube.com/embed/x-YF4cB4-70",
+            "https://www.youtube.com/embed/_1g7cSO5X30",
+            "https://www.youtube.com/embed/v2Z1fIcvCZY",
+            "https://www.youtube.com/embed/IfrQwQq0xQ8",
+            "https://www.youtube.com/embed/-UeDT36N3fU",
+            "https://www.youtube.com/embed/VfrqVjSwi8s",
+            "https://www.youtube.com/embed/8fJexaC5lOw",
+            "https://www.youtube.com/embed/QEp-AJ01wps",
+            "https://www.youtube.com/embed/illSE4tHP8U",
+            "https://www.youtube.com/embed/3oO2nFQNT4w",
+            "https://www.youtube.com/embed/_hgpcwmYH4g",
+            "https://www.youtube.com/embed/_vlSM4hthW0",
+            "https://www.youtube.com/embed/2pdpQUb-DyY",
+            "https://www.youtube.com/embed/-w0cWaUcXoY",
+            "https://www.youtube.com/embed/ep2D6HZGLhM",
+            "https://www.youtube.com/embed/z1NxVvaPUxw",
+            "https://www.youtube.com/embed/davF0fAPsEs",
+            "https://www.youtube.com/embed/PDRUavDf83k",
+            "https://www.youtube.com/embed/TN6Bd_uP4AQ",
+            "https://www.youtube.com/embed/omKJO_LO0Hg",
+            "https://www.youtube.com/embed/cqZjC69QPIY",
+            "https://www.youtube.com/embed/s6pCfrqu-ug",
+            "https://www.youtube.com/embed/bjpQJahvTJU",
+            "https://www.youtube.com/embed/8hduGRNblmQ",
+            "https://www.youtube.com/embed/qM-CBgEpp78",
+            "https://www.youtube.com/embed/Q6E6QMvxA9g",
+            "https://www.youtube.com/embed/FpqTAfvea4Y",
+            "https://www.youtube.com/embed/r-SS0dKXPVY",
+            "https://www.youtube.com/embed/x-xtTA1C_j8",
+            "https://www.youtube.com/embed/YExamzGP7k0",
+            "https://www.youtube.com/embed/Kp2CPUuIvQ8",
+            "https://www.youtube.com/embed/Wz4N-PNNteM",
+            "https://www.youtube.com/embed/WZb8Hg4mOIU",
+            "https://www.youtube.com/embed/JvENsHqWXfw",
+            "https://www.youtube.com/embed/2ig-1eTc_VY"
         ];
 
         let currentVideoIndex = 0;
@@ -189,7 +196,7 @@
             }
             document.getElementById("videoFrame").src = videoUrls[currentVideoIndex];
 
-            progress += 4; // Increase progress by 4.3%
+            progress += 2.51; // Increase progress by 2.6%
             if (progress > 100) progress = 100;
             updateProgressBar();
 

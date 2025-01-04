@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            background-color: #e5f7ec;
+        }
+        li {
+            background-color: #fff5;
+            margin: 10px;
+            padding: 10px;
+            list-style: none;
+            list-style-type: decimal-leading-zero;
+            border-radius: 10px;
+            font-weight: 200;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+            padding: 10px;
+            font-weight: 400;
+            justify-content: center;
+        }
+        li:hover, a:hover {
+            background-color: green;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Placeholder <li> elements -->
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        
+       </div>
+
+    <script>
+        // JSON data
+        const videos = [
+    {
+        "title": "Bootstrap Tutorials Session 01",
+        "embeddedSrc": "https://www.youtube.com/embed/wgASnaPS0q8"
+    },
+    {
+        "title": "Bootstrap Tutorials Session 02",
+        "embeddedSrc": "https://www.youtube.com/embed/-kdHuP26NXE"
+    },
+    {
+        "title": "Bootstrap Tutorials Session 03",
+        "embeddedSrc": "https://www.youtube.com/embed/JiS20u7rG8I"
+    },
+    {
+        "title": "Bootstrap Tutorials Session 04",
+        "embeddedSrc": "https://www.youtube.com/embed/MKxgZv8EO7Q"
+    },
+    {
+        "title": "Bootstrap Tutorials Session 05",
+        "embeddedSrc": "https://www.youtube.com/embed/Skeuvyso84Q"
+    },
+    {
+        "title": "Bootstrap Tutorials Session 06",
+        "embeddedSrc": "https://www.youtube.com/embed/FJ6s5Oh_-7A"
+    },
+    {
+        "title": "Bootstrap Tutorials Session 07",
+        "embeddedSrc": "https://www.youtube.com/embed/vaLDCVAJklE"
+    },
+    {
+        "title": "Bootstrap Tutorials Session 08",
+        "embeddedSrc": "https://www.youtube.com/embed/s56GtxkJUWE"
+    },
+    {
+        "title": "Bootstrap Tutorials Session 09",
+        "embeddedSrc": "https://www.youtube.com/embed/HGhOmJn58Ug"
+    },
+    {
+        "title": "Tailwind CSS Session 10",
+        "embeddedSrc": "https://www.youtube.com/embed/mbo8r9SrXYQ"
+    }
+]
+
+        // Get all <a> elements
+        const links = document.querySelectorAll('.container a');
+
+        // Populate <a> elements with JSON data
+        videos.forEach((video, index) => {
+            if (links[index]) {
+                links[index].href = video.embeddedSrc;
+                links[index].textContent = video.title;
+                links[index].target="videoFrame";
+            }
+        });
+    </script>
+</body>
+</html>

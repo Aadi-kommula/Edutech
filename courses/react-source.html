@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            background-color: #e5f7ec;
+        }
+        li {
+            background-color: #fff5;
+            margin: 10px;
+            padding: 10px;
+            list-style: none;
+            list-style-type: decimal-leading-zero;
+            border-radius: 10px;
+            font-weight: 200;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+            padding: 10px;
+            font-weight: 400;
+            justify-content: center;
+        }
+        li:hover, a:hover {
+            background-color: green;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Placeholder <li> elements -->
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+        <li><a href="#" target="videoFrame"></a>&nbsp; <i class="bi bi-play-btn"></i></li>
+    
+      
+      </div>
+
+    <script>
+        // JSON data
+        const videos =[
+    {
+        "title": "React Introduction",
+        "embeddedSrc": "https://www.youtube.com/embed/UXZLkmaCqIs"
+    },
+    {
+        "title": "React Installations & Setup  ",
+        "embeddedSrc": "https://www.youtube.com/embed/VCjwjK1mHzk"
+    },
+    {
+        "title": "React Files & Folders",
+        "embeddedSrc": "https://www.youtube.com/embed/x-YF4cB4-70"
+    },
+    {
+        "title": "React Components",
+        "embeddedSrc": "https://www.youtube.com/embed/_1g7cSO5X30"
+    },
+    {
+        "title": "React Nested Components  ",
+        "embeddedSrc": "https://www.youtube.com/embed/v2Z1fIcvCZY"
+    },
+    {
+        "title": "React CSS Implementation ",
+        "embeddedSrc": "https://www.youtube.com/embed/IfrQwQq0xQ8"
+    },
+    {
+        "title": "React JSX Implementation ",
+        "embeddedSrc": "https://www.youtube.com/embed/-UeDT36N3fU"
+    },
+    {
+        "title": "React Elements ",
+        "embeddedSrc": "https://www.youtube.com/embed/VfrqVjSwi8s"
+    },
+    {
+        "title": "Show Images  ",
+        "embeddedSrc": "https://www.youtube.com/embed/8fJexaC5lOw"
+    },
+    {
+        "title": "React Props ",
+        "embeddedSrc": "https://www.youtube.com/embed/QEp-AJ01wps"
+    },
+    {
+        "title": "Props Destructuring  ",
+        "embeddedSrc": "https://www.youtube.com/embed/illSE4tHP8U"
+    },
+    {
+        "title": "useState Hook  ",
+        "embeddedSrc": "https://www.youtube.com/embed/3oO2nFQNT4w"
+    },
+    {
+        "title": "State Management-Conditions",
+        "embeddedSrc": "https://www.youtube.com/embed/_hgpcwmYH4g"
+    },
+    {
+        "title": "useEffect Hook  ",
+        "embeddedSrc": "https://www.youtube.com/embed/_vlSM4hthW0"
+    },
+    {
+        "title": "Ternary Operator  ",
+        "embeddedSrc": "https://www.youtube.com/embed/2pdpQUb-DyY"
+    },
+    {
+        "title": "Events  ",
+        "embeddedSrc": "https://www.youtube.com/embed/-w0cWaUcXoY"
+    },
+    {
+        "title": "Event Listeners  ",
+        "embeddedSrc": "https://www.youtube.com/embed/ep2D6HZGLhM"
+    },
+    {
+        "title": "React Beginner Project ",
+        "embeddedSrc": "https://www.youtube.com/embed/z1NxVvaPUxw"
+    },
+    {
+        "title": "React Form Events",
+        "embeddedSrc": "https://www.youtube.com/embed/davF0fAPsEs"
+    },
+    {
+        "title": "NPM",
+        "embeddedSrc": "https://www.youtube.com/embed/PDRUavDf83k"
+    },
+    {
+        "title": "Array data  ",
+        "embeddedSrc": "https://www.youtube.com/embed/TN6Bd_uP4AQ"
+    },
+    {
+        "title": "Arrays with Map method  ",
+        "embeddedSrc": "https://www.youtube.com/embed/omKJO_LO0Hg"
+    },
+    {
+        "title": "Nested Objects  ",
+        "embeddedSrc": "https://www.youtube.com/embed/cqZjC69QPIY"
+    },
+    {
+        "title": "Template Literals  ",
+        "embeddedSrc": "https://www.youtube.com/embed/s6pCfrqu-ug"
+    },
+    {
+        "title": "Fetch Method ",
+        "embeddedSrc": "https://www.youtube.com/embed/bjpQJahvTJU"
+    },
+    {
+        "title": "POST request & Fetch API  ",
+        "embeddedSrc": "https://www.youtube.com/embed/8hduGRNblmQ"
+    },
+    {
+        "title": "Error Handling  ",
+        "embeddedSrc": "https://www.youtube.com/embed/qM-CBgEpp78"
+    },
+    {
+        "title": "Virtual DOM ",
+        "embeddedSrc": "https://www.youtube.com/embed/Q6E6QMvxA9g"
+    },
+    {
+        "title": "Short Circuit Evaluation  ",
+        "embeddedSrc": "https://www.youtube.com/embed/FpqTAfvea4Y"
+    },
+    {
+        "title": "Spread Operator  ",
+        "embeddedSrc": "https://www.youtube.com/embed/r-SS0dKXPVY"
+    },
+    {
+        "title": "useReducer Hook  ",
+        "embeddedSrc": "https://www.youtube.com/embed/x-xtTA1C_j8"
+    },
+    {
+        "title": "Create React with Vite",
+        "embeddedSrc": "https://www.youtube.com/embed/YExamzGP7k0"
+    },
+    {
+        "title": "Routing  ",
+        "embeddedSrc": "https://www.youtube.com/embed/Kp2CPUuIvQ8"
+    },
+    {
+        "title": "useContext Hook  ",
+        "embeddedSrc": "https://www.youtube.com/embed/Wz4N-PNNteM"
+    },
+    {
+        "title": "VS Code Keyboard Shortcuts",
+        "embeddedSrc": "https://www.youtube.com/embed/WZb8Hg4mOIU"
+    },
+    {
+        "title": "React Tutorials in ",
+        "embeddedSrc": "https://www.youtube.com/embed/JvENsHqWXfw"
+    },
+    {
+        "title": "Interview Question",
+        "embeddedSrc": "https://www.youtube.com/embed/2ig-1eTc_VY"
+    }
+]
+        // Get all <a> elements
+        const links = document.querySelectorAll('.container a');
+
+        // Populate <a> elements with JSON data
+        videos.forEach((video, index) => {
+            if (links[index]) {
+                links[index].href = video.embeddedSrc;
+                links[index].textContent = video.title;
+                links[index].target="videoFrame";
+            }
+        });
+    </script>
+</body>
+</html>
