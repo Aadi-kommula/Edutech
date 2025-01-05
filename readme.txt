@@ -3,7 +3,7 @@ Here's the documentation of Edutech E-Learning Platform
 Edutech developed by Aadi Kommula 
 
 # Live at aadi-edutech.vercel.app
-# Documentation at aadi-edutech.vercel.app/docs
+# Documentation at aadi-edutech.vercel.app/docs/Edutech.pdf
 
 Features of Edutech
 -------------------
