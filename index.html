@@ -125,10 +125,63 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+    <script src="/inspect.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <script>
+    function dot_net() {
+        document.getElementById('popup').style.display = 'block';
+        document.getElementById('overlay').style.display = 'block';
+        document.getElementById('py').style.display = 'none';
+
+      }
+      function python() {
+        document.getElementById('popup').style.display = 'block';
+        document.getElementById('overlay').style.display = 'block';
+
+      }
+      function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+        document.getElementById('overlay').style.display = 'none';
+      }
+    // JavaScript to toggle the visibility of the new navbar on scroll
+    window.addEventListener("scroll", function () {
+      const scrollNavbar = document.getElementById("scrollNavbar");
+      if (window.scrollY > 100) { // Adjust the scroll threshold as needed
+        scrollNavbar.classList.add("visible");
+      } else {
+        scrollNavbar.classList.remove("visible");
+      }
+    });
+  </script>
+  <style>
+      #popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        border-radius: 8px;
+        text-align: center;
+      }
+
+      #overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+      }
+  </style>
   <div class="intro-container">
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
@@ -268,7 +321,7 @@
       <button type="button" class="btn btn-success"><a href="./courses/js-course.html">Start Course</a>&nbsp;<i
           class="bi bi-play-btn-fill"></i></button>
     </div>
-    
+
 
     <div class="card">
       <img class="mb-2" src="./images/courses/java.png" alt="image">
@@ -281,13 +334,14 @@
       <button type="button" class="btn btn-success"><a href="./courses/java-course.html">Start Course</a>&nbsp;<i
           class="bi bi-play-btn-fill"></i></button>
     </div>
-    
+
     <div class="card">
       <img class="mb-2" src="./images/courses/python.jpg" alt="image" height="170px">
       <img id="author" src="./images/author.jpg" alt="author">
       <p>@Code with Aadi</p>
       <span id="c-name">&#8377;2999</span>
-      <span id="descpriton">Unlock the World of Programming with Python! From Basics to Advanced, Start Your Coding Journey Today.</span>
+      <span id="descpriton">Unlock the World of Programming with Python! From Basics to Advanced, Start Your Coding
+        Journey Today.</span>
       <span id="time"> <i class="bi bi-alarm">&nbsp;</i> 19 hr 09 mins &nbsp; &nbsp; &nbsp; <i
           class="bi bi-collection-play">&nbsp;</i>72 lectures</span>
       <button type="button" class="btn btn-success" onclick="python()">Start Course&nbsp;<i
@@ -299,36 +353,38 @@
       <img id="author" src="./images/author-03.webp" alt="author">
       <p>Telugu WebTech</p>
       <span id="c-name">&#8377;Free</span>
-      <span id="descpriton">Build Dynamic Web Apps Effortlessly! Master ReactJS and Elevate Your Frontend  Skills.</span>
+      <span id="descpriton">Build Dynamic Web Apps Effortlessly! Master ReactJS and Elevate Your Frontend Skills.</span>
       <span id="time"> <i class="bi bi-alarm">&nbsp;</i> 12 hr 03 mins &nbsp; &nbsp; &nbsp; <i
           class="bi bi-collection-play">&nbsp;</i>37 lectures</span>
       <button type="button" class="btn btn-success"><a href="./courses/react-course.html">Start Course</a>&nbsp;<i
           class="bi bi-play-btn-fill"></i></button>
     </div>
-    
-    
-    
+
+
+
 
     <div class="card">
       <img class="mb-2" src="./images/courses/Bootstrap-Tutorial.webp" alt="image">
       <img id="author" src="./images/author-02.webp" alt="author">
       <p>@Naresh_IT</p>
       <span id="c-name">&#8377;Free</span>
-      <span id="descpriton">Design Stunning, Responsive Websites in No Time! Unlock the Power of Bootstrap for Seamless UI Development.</span>
+      <span id="descpriton">Design Stunning, Responsive Websites in No Time! Unlock the Power of Bootstrap for Seamless
+        UI Development.</span>
       <span id="time"> <i class="bi bi-alarm">&nbsp;</i> 14 hr 02 mins &nbsp; &nbsp; &nbsp; <i
           class="bi bi-collection-play">&nbsp;</i>10 Sessions</span>
       <button type="button" class="btn btn-success"><a href="./courses/bootstrap-course.html">Start Course</a>&nbsp;<i
           class="bi bi-play-btn-fill"></i></button>
     </div>
-    
-    
+
+
 
     <div class="card">
       <img class="mb-2" src="./images/courses/git.jpg" alt="image" height="170px">
       <img id="author" src="./images/author-02.webp" alt="author">
       <p>Naveen @Telsuko</p>
       <span id="c-name">&#8377;Free</span>
-      <span id="descpriton">Take Control of Your Code! Master Git for Efficient Version Control and Collaborative Development.</span>
+      <span id="descpriton">Take Control of Your Code! Master Git for Efficient Version Control and Collaborative
+        Development.</span>
       <span id="time"> <i class="bi bi-alarm">&nbsp;</i> 1 hr 5 mins &nbsp; &nbsp; &nbsp; <i
           class="bi bi-collection-play">&nbsp;</i>07 lectures</span>
       <button type="button" class="btn btn-success"><a href="./courses/git-course.html">Start Course</a>&nbsp;<i
@@ -336,58 +392,13 @@
     </div>
     
     
-
-    
-    
-    <style>
-        #popup {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: white;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            border-radius: 8px;
-            text-align: center;
-        }
-        #overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 999;
-        }
-        </style>
-        <script>
-           function dot_net() {
-            document.getElementById('popup').style.display = 'block';
-            document.getElementById('overlay').style.display = 'block';
-            document.getElementById('py').style.display = 'none';
-
-        }
-        function python() {
-            document.getElementById('popup').style.display = 'block';
-            document.getElementById('overlay').style.display = 'block';
-
-        }
-        function closePopup() {
-            document.getElementById('popup').style.display = 'none';
-            document.getElementById('overlay').style.display = 'none';
-        }
-        </script>
-
     <div class="card">
       <img class="mb-2" src="./images/courses/dot-net.jpg" alt="image" height="170px">
       <img id="author" src="./images/author.jpg" alt="author">
       <p>@Aadi's info</p>
       <span id="c-name">&#8377;1999</span>
-      <span id="descpriton">Power Your Applications with .NET! Build Scalable, High-Performance Solutions for Modern Development.</span>
+      <span id="descpriton">Power Your Applications with .NET! Build Scalable, High-Performance Solutions for Modern
+        Development.</span>
       <span id="time"> <i class="bi bi-alarm">&nbsp;</i> 21 hr 08 mins &nbsp; &nbsp; &nbsp; <i
           class="bi bi-collection-play">&nbsp;</i>93 lectures</span>
       <button type="button" class="btn btn-success" onclick="dot_net()">Start Course&nbsp;<i
@@ -397,10 +408,11 @@
       <h5>Payment Gateway Under Development</h5>
       <p>You will be notified when the payment gateway is ready.</p>
       <button onclick="closePopup()" class="btn btn-success me-3">OK</button>
-      <button onclick="closePopup()" id="py" class="btn btn-success"><a href="./Quiz/python-quiz.html">Try quiz</a></button>
-  </div>
-  <div id="overlay"></div>
-    
+      <button onclick="closePopup()" id="py" class="btn btn-success"><a href="./Quiz/python-quiz.html">Try
+          quiz</a></button>
+    </div>
+    <div id="overlay"></div>
+
   </div>
   <footer class="text-center py-2">
     <div class="container">
@@ -414,17 +426,7 @@
       </div>
     </div>
   </footer>
-  <script>
-    // JavaScript to toggle the visibility of the new navbar on scroll
-    window.addEventListener("scroll", function () {
-      const scrollNavbar = document.getElementById("scrollNavbar");
-      if (window.scrollY > 100) { // Adjust the scroll threshold as needed
-        scrollNavbar.classList.add("visible");
-      } else {
-        scrollNavbar.classList.remove("visible");
-      }
-    });
-  </script>
+ 
 </body>
 
 </html>
