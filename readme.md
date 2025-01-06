@@ -2,7 +2,7 @@
 
 > ###  Edutech developed by Aadi Kommula 
 
-## [ Live Preview ](aadi-edutech.vercel.app)
+## [ Live Preview ](https://aadi-edutech.vercel.app/)
 
 **Features of Edutech**
 -------------------
