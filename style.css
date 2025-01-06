@@ -1,5 +1,6 @@
 body{
     font-family: "Montserrat", sans-serif;
+    cursor: url('./images/cursor-34.png'), auto;
 }
 .intro-container{
     background-color: #e5f7ec;
