@@ -117,8 +117,35 @@ h1:hover {
 
 }
 
-@media only screen and (max-width:500px) {
+@media only screen and (max-width:700px) {
+
+
+  body {
+    margin: 0px;
+    padding: 0;
+
+  }
+
+  .intro-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  #results-container {
+    margin: 10px 30px 10px 10px !important;
+  }
+
+ 
+
+  .container-fluid {
+    padding: 0;
+    margin: 0;
+  }
+
   .quiz-container {
+
+    width: 100%;
     margin: 20px;
 
   }
@@ -139,13 +166,14 @@ h1:hover {
 
   #image img {
     display: none;
-    margin: 0px;
-    width: 100%;
+
 
   }
+  
+
 
   #heading {
-    position: relative;
-    margin: 0;
+    margin: 20px 30px 20px 20px;
+    padding: 0px;
   }
 }
