@@ -13,14 +13,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-</head>
-
-<body>
     <style>
         .intro-container {
             background-color: #e5f7ec;
             padding: 1px;
+            width: 100%;
         }
+
 
         nav {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -42,8 +41,6 @@
 
         .dropdown:hover .dropdown-menu {
             display: block;
-
-
         }
 
         .dropdown-menu {
@@ -54,8 +51,49 @@
             min-width: auto;
             box-shadow: rgba(1, 9, 17, 0.2) 0px 8px 24px;
         }
-    </style>
 
+        /* New styles for quiz results */
+
+        #results-container {
+            display: none;
+            margin: 20px 0px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f8f9fa;
+            color: #dc3545;
+            width: auto;
+        }
+
+        .result-item {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .correct {
+            background-color: #d4edda;
+            border-left: 5px solid #28a745;
+            color: #212832;
+        }
+
+        .incorrect {
+            background-color: #f8d7da;
+            border-left: 5px solid #dc3545;
+            color: #212832;
+        }
+
+        .user-answer {
+            font-weight: bold;
+        }
+
+        .correct-answer {
+            font-weight: bold;
+            color: #28a745;
+        }
+    </style>
+</head>
+
+<body>
     <div class="intro-container">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
@@ -94,7 +132,7 @@
 
     <div class="quiz-container">
         <div class="content">
-            <h1 id="heading">Test Your Code Skills  <Span> Let's Start JavaScript Quiz!</Span></h1>
+            <h1 id="heading">Test Your Code Skills <Span> Let's Start JavaScript Quiz!</Span></h1>
             <div class="card" id="card">
                 <div class="ques">
                     <h2>Question No: <span id="question-number">1</span> / <span id="total-questions">10</span></h2>
@@ -109,27 +147,161 @@
             </div>
             <p id="score" style="display: none;">Your Score: <span id="score-value">0</span> out of <span
                     id="total-questions-score">10</span></p>
+
+            <!-- Results container -->
+            <div id="results-container">
+                <h3>Quiz Results</h3>
+                <div id="results-list">
+                    <!-- Results will be inserted here -->
+                </div>
+            </div>
         </div>
-        
+
         <div id="image">
-            <img src="../images/exam.png" alt="quiz-image">
+            <img src="../images/exam1.png" alt="quiz-image" height="450px">
         </div>
     </div>
 
-    <footer class="text-center py-2 mt-4" style="background-color: #255367d4 !important; color: #FFF; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: 500;">
+    <footer id="footer" class="text-center py-2 mt-4"
+        style="background-color: #255367d4 !important; color: #FFF; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: 500;">
         <div class="container">
-          <div class="row align-items-center">
-            <div class="col-md-4">
-              <!-- <img src="./images/e-learning logo.png" alt="Company Logo" class="img-fluid" width="90px">  -->
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                    <p class="mb-0">© 2025 Edutech. All rights reserved.</p>
+                </div>
             </div>
-            <div class="col-md-4">
-              <p class="mb-0">© 2025 Edutech. All rights reserved.</p>
-            </div>
-          </div>
         </div>
-      </footer>
-      
-    <script src="./scripts//js-quiz-script.js"></script>
+    </footer>
+
+    <script>
+        const question = [
+            "What is JavaScript?",
+            "Which of the following is not a JavaScript data type?",
+            "How do you declare a variable in JavaScript?",
+            "Which operator is used to assign a value to a variable?",
+            "What is the correct syntax for referring to an external script called 'script.js'?",
+            "How do you write a comment in JavaScript?",
+            "Which function is used to parse a string to an integer?",
+            "What is the output of '2' + '2' in JavaScript?",
+            "Which event occurs when the user clicks on an HTML element?",
+            "How do you create a function in JavaScript?"
+        ];
+
+        const options = [
+            ["A markup language", "A scripting language", "A styling language", "A database language"],
+            ["String", "Number", "Boolean", "Float"],
+            ["var x;", "variable x;", "v x;", "declare x;"],
+            ["=", "==", "===", "=>"],
+            ["<script href='script.js'>", "<script name='script.js'>", "<script src='script.js'>", "<script file='script.js'>"],
+            ["<!-- comment -->", "// comment", "/* comment */", "# comment"],
+            ["parseInt()", "parseFloat()", "number()", "int()"],
+            ["4", "22", "NaN", "Error"],
+            ["onchange", "onclick", "onmouseover", "onload"],
+            ["function:myFunction()", "function myFunction()", "function = myFunction()", "function => myFunction()"]
+        ];
+
+        const actualans = [
+            "A scripting language",
+            "Float",
+            "var x;",
+            "=",
+            "<script src='script.js'>",
+            "// comment",
+            "parseInt()",
+            "22",
+            "onclick",
+            "function myFunction()"
+        ];
+
+        let counter = 0;
+        let score = 0;
+        let userAnswers = [];
+
+        function CheckAns(v) {
+            userAnswers.push(v);
+            if (v === actualans[counter]) {
+                score++;
+            }
+        }
+
+        function Change(index) {
+            const v = document.getElementById(index).innerText;
+            CheckAns(v);
+
+            if (counter < question.length - 1) {
+                counter++;
+                updateQuestion();
+            } else {
+                showResults();
+            }
+        }
+
+        function updateQuestion() {
+            document.getElementById('question-number').innerText = counter + 1;
+            document.getElementById('question-text').innerText = question[counter];
+            const optionsContainer = document.getElementById('option');
+            optionsContainer.innerHTML = '';
+            options[counter].forEach((option, index) => {
+                const li = document.createElement('li');
+                li.id = index;
+                li.innerText = option;
+                li.onclick = () => Change(index);
+                optionsContainer.appendChild(li);
+            });
+        }
+
+        function escapeHtml(unsafe) {
+            return unsafe
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+
+        function showResults() {
+            document.getElementById('card').style.display = 'none';
+            document.getElementById('heading').style.display = 'none';
+            document.getElementById('image').style.display = 'none';
+            document.getElementById('footer').style.display = 'none';
+
+            // Show score
+            document.getElementById('score').style.display = 'block';
+            document.getElementById('score-value').innerText = score;
+            document.getElementById('total-questions-score').innerText = question.length;
+
+            // Show results
+            document.getElementById('results-container').style.display = 'block';
+            const resultsList = document.getElementById('results-list');
+            resultsList.innerHTML = '';
+
+            for (let i = 0; i < question.length; i++) {
+                const resultItem = document.createElement('div');
+                resultItem.className = `result-item ${userAnswers[i] === actualans[i] ? 'correct' : 'incorrect'}`;
+
+                const questionText = document.createElement('p');
+                questionText.innerHTML = `<strong>Question ${i + 1}:</strong> ${escapeHtml(question[i])}`;
+                resultItem.appendChild(questionText);
+
+                const userAnswerText = document.createElement('p');
+                userAnswerText.innerHTML = `<span class="user-answer">Your answer:</span> ${escapeHtml(userAnswers[i])}`;
+                resultItem.appendChild(userAnswerText);
+
+                const correctAnswerText = document.createElement('p');
+                correctAnswerText.innerHTML = `<span class="correct-answer">Correct answer:</span> ${escapeHtml(actualans[i])}`;
+                resultItem.appendChild(correctAnswerText);
+
+                resultsList.appendChild(resultItem);
+            }
+        }
+
+        // Initialize the first question
+        updateQuestion();
+        document.getElementById('total-questions').innerText = question.length;
+        document.getElementById('total-questions-score').innerText = question.length;
+    </script>
 </body>
 
 </html>
